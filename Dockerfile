@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install -y python python-dev python-pip
 RUN pip install -U pip
 RUN pip install -U distribute
-RUN pip install devpi>=1.2.1
+RUN pip install https://bitbucket.org/stefanfoulis/devpi/get/default.tar.gz#egg=devpi
 
 
 VOLUME ["/data"]
