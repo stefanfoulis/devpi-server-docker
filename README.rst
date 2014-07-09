@@ -9,7 +9,8 @@ To just run the built image from the docker index::
     # create a data container
     docker run -d -v /data --name devpi-server-data ubuntu:12.04
     # launch the container
-    docker run -i -d -p 0.0.0.0:$HOSTPORT:3141 -volumes-from devpi-server-data stefanfoulis/devpi-server
+    docker run -d -p 127.0.0.1:3141:3141 -i -t -volumes-from devpi-server-data -name devpi-server10 aldryn/devpi-server:latest
+    docker run -d -p 127.0.0.1:3141:3141 -i -t -volumes-from devpi-server-data -name devpi-server10 aldryn/devpi-server:v6
 
 
 TODO: describe local development
